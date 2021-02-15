@@ -1,7 +1,7 @@
 # Mission to Mars
 
 ## Overview
-Mission to Mars was a project to scrape data about Mars from the websites below and to use Flask, HTML, and CSS to display the latest scraped news articles, facts, and images on one customized website.
+Mission to Mars was a project to scrape data about Mars from the websites below using Python and MongoDB and to use Flask, HTML, and CSS to display the latest scraped news articles, facts, and images on one customized website.
 
 The links below were scraped to pull the data for the website:
 
