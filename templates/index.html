@@ -11,12 +11,13 @@
     />
   </head>
   <body>
+    <body class="text-white" style="background-color:black;"></body>
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
-        <h1>Mission to Mars</h1>
+      <div class="jumbotron text-center" style="background-image: url(https://th.bing.com/th/id/R080ddd2fcf0d1c6d12f270ce7408b53d?rik=GDlxP4xBPZTc7Q&riu=http%3a%2f%2fwonderfest.org%2fwp-content%2fuploads%2f2018%2f01%2fmission-mars-e1528241593215.jpg&ehk=sCID2nb9ibvEW6y670Nf91nMY0T86q9M977qhxPT5Nk%3d&risl=&pid=ImgRaw); height: 400px; background-position: center; background-size: cover;"></div>
+        <h1 class="text-center", style=color:white><b>Mission to Mars</b></h1>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <p><a class="btn btn-danger btn-lg", class="center" href="/scrape" role="button" background_position="center">Scrape New Data </a></p>
       </div>
 
       <!-- Add section for Mars News -->
@@ -24,18 +25,18 @@
         <div class="col-md-12">
           <div class="media">
             <div class="media-body">
-              <h2>Latest Mars News</h2>
-              <h4 class="media-heading">{{ mars.news_title }}</h4>
-              <p>{{ mars.news_paragraph }}</p>
+              <h2 style="color: white;">Latest Mars News</h2>
+              <h4 class="media-heading", style="color: white;">{{ mars.news_title }}</h4>
+              <p style="color: white;">{{ mars.news_paragraph }}</p>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Section for Featured Image and Facts table -->
-      <div class="row" id="mars-featured-image">
-        <div class="col-md-8">
-          <h2>Featured Mars Image</h2>
+      <div style="color: white;" class="row" id="mars-featured-image">
+        <div class="col-md-8" style="color: white;" style="background-color: black;">
+          <h2 style="color: white;">Featured Mars Image</h2>
 
           <!-- if images is False/None/non-existent, then default to error message -->
           <img
@@ -47,8 +48,10 @@
 
         <div class="col-md-4">
           <!-- Mars Facts -->
-          <div class="row" id="mars-facts">
-            <h4>Mars Facts</h4>
+          <div class="center" class="row" id="mars-facts">
+            <h4 style="text-align: center;">Mars Facts</h4>
+            <table border="1" class="dataframe table">
+            </table>
             {{ mars.facts | safe }}
           </div>
         </div>
@@ -57,7 +60,7 @@
       <!-- Section for Mars Hemispheres -->
       <div class="row" id="mars-hemispheres">
         <div class="page-header">
-          <h2 class="text-center">Mars Hemispheres</h2>
+          <h2 style="color: white;", class="text-center">Mars Hemispheres</h2>
         </div>
         {% for hemisphere in mars.hemispheres %}
         <div class="col-md-6">
